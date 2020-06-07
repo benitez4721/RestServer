@@ -14,7 +14,7 @@ app.get('/usuario', function (req, res) {
     limite = Number(limite)
 
     desde = Number(desde);
-    Usuario.find('nombre email')
+    Usuario.find({})
         .skip(desde)
         .limit(limite)
         .exec( (err, usuarios) => {
